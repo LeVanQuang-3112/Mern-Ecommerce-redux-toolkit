@@ -37,14 +37,14 @@ export const userLogout = createAsyncThunk('user/userLogout', async () => {
 })
 
 export const getInfoUser = createAsyncThunk('user/getInfoUser', async (token) => {
-    try {
+    // try {
         const {data} = await axios.get(`http://localhost:5000/user/infor`, {
             headers: {Authorization: token}
         })
         return data;
-    } catch(error) {
-        Swal.fire("error", error.response.data.msg, "error")
-    }
+    // } catch(error) {
+    //     Swal.fire("error", error.response.data.msg, "error")
+    // }
 })
 
 export const getHistoryUser = createAsyncThunk('user/getHistoryUser', async (token) => {

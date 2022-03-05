@@ -3,6 +3,7 @@ import { useParams } from "react-router"
 import {useDispatch, useSelector} from "react-redux"
 import { productSelector, getProducts } from '../../../store/storeAction'
 import "./ProductDetail.scss"
+import {v4 as uuidv4} from 'uuid';
 
 export const ProductDetail = () => {
     const dispatch = useDispatch()
@@ -34,6 +35,8 @@ export const ProductDetail = () => {
 
   console.log(productDetail)
   if(productDetail.length === 0) return null
+  let color = "#FFA41C"
+
   return (
     <div className="main">
         <div className="container__item container">
@@ -52,10 +55,22 @@ export const ProductDetail = () => {
                 <p>{productDetail.description}</p>
                 <p>{productDetail.content}</p>
                 </div>
-                {/* <div>
-                    <Button variant="contained" color="success" 
-                    className="detail__button">Buy Now</Button>
-                </div> */}
+                <div>
+                <h2>Rating: {[1,2,3,4,5].map((rate) => (
+                <span key={uuidv4()}>
+                    <i style={{color}} className= {
+                        productDetail.rating + 1 === rate + 0.5 
+                        ? "fas fa-star-half-alt" 
+                        : productDetail.rating >= rate 
+                        ? "fas fa-star" 
+                        : "far fa-star"
+                    }
+                    />
+                </span>
+            ))}</h2>
+                
+                </div>
+                <div></div>
             </div>
         </div>
         </div>

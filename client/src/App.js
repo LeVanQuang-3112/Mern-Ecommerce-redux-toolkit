@@ -38,8 +38,8 @@ function App() {
          <Route path="/register" element={isLogged ? <NotFound/> : <Register/>}/>
          <Route path="/products/:id" element={<ProductDetail />} />
          <Route path="/cart" element={<Cart />} />
-         <Route path="/admin" element={isAdmin ? <Admin/> : <NotFound/>} />
-         <Route path="/history" element={isLogged ? <History/> : <NotFound/>} />
+         <Route path="/admin" element={<Admin/>} />
+         <Route path="/history" element={ <History/> } />
          <Route path="/admin/:id" element={<Admin/>} />
 
          <Route path="#" index element={<NotFound />} />

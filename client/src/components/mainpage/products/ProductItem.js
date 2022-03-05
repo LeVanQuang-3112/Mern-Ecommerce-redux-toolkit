@@ -6,6 +6,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { addCart, getInfoUser, userSelector} from '../../../store/storeAction';
 import Swal from 'sweetalert2';
 import axios from 'axios'
+import {v4 as uuidv4} from 'uuid';
 
 export const ProductItem = ({product}) => {
     const dispatch = useDispatch()
@@ -60,7 +61,8 @@ export const ProductItem = ({product}) => {
         }
     }
 
-
+  let color = "#FFA41C"
+  
   return (
     <div className="product__container">
             <Link to={`/products/${product._id}`}>
@@ -76,6 +78,20 @@ export const ProductItem = ({product}) => {
                          : (<p>{product.title}</p>)
                      }
                      <h3>Price: ${product.price}</h3>
+                {[1,2,3,4,5].map((rate) => (
+                <span key={uuidv4()}>
+                    <i style={{color}} className= {
+                        product.rating + 1 === rate + 0.5 
+                        ? "fas fa-star-half-alt" 
+                        : product.rating >= rate 
+                        ? "fas fa-star" 
+                        : "far fa-star"
+                    }
+                    />
+                </span>
+            ))}
+                </div>
+                <div>
                 </div>
             </div>
             </Link>

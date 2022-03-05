@@ -50,6 +50,7 @@ export default function AdminProductsList() {
     const {products} = productAction
     const adminInfo = useSelector(adminSelector)
     const {categories} = adminInfo
+    console.log(products)
 
     useEffect(() => {
         dispatch(getProducts({page, category, sort, search}))
