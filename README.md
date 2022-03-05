@@ -4,37 +4,41 @@
 
 ## Author: Le Van Quang
 
-## Install dependencies for server 
+## Install dependencies for server
+
 ### `npm install`
 
 ## Install dependencies for client
+
 ### cd client ---> `npm install`
 
 ## Run project
 
 ### `npm run dev`
+
 ### cd client `npm start`
 
 ### Server runs on http://localhost:5000 and client on http://localhost:3000
 
 ## Accounts
+
 ### User: email: quang111@gmail.com, password: 123456
+
 ### Admin: email: quang123@gmail.com, password: 123456
 
-
-### Home interface 
+### Home interface
 
 ![alt](https://res.cloudinary.com/levanquang/image/upload/v1646502324/redux-tutorial/screencapture-localhost-3000-2022-03-06-00_36_40_gbtbij.png)
 
-### Admin page interface 
+### Admin page interface
 
 ![alt](https://res.cloudinary.com/levanquang/image/upload/v1646502291/redux-tutorial/screencapture-localhost-3000-admin-2022-03-06-00_37_49_xsjaq8.png)
 
-### History page interface 
+### History page interface
 
 ![alt](https://res.cloudinary.com/levanquang/image/upload/v1646502264/redux-tutorial/screencapture-localhost-3000-history-2022-03-06-00_38_44_kdgsoy.png)
 
-### Cart page interface 
+### Cart page interface
 
 ![alt](https://res.cloudinary.com/levanquang/image/upload/v1646502278/redux-tutorial/screencapture-localhost-3000-cart-2022-03-06-00_39_50_dd0tvl.png)
 
