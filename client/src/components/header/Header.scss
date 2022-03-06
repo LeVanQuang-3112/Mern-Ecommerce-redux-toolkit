@@ -72,6 +72,12 @@ a {
   border-radius: 50%;
 
 }
+.avatar__header {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
 .search__header--container {
   width: 50%;
   display: flex;
@@ -119,12 +125,13 @@ a {
 }
 .header__icon {
   font-size: 2.5rem;
+  color: white;
 }
 .infor__icon p, .infor__icon--mobile p {
   margin: 0;
 }
-.heart__icon a:hover {
-  color:rgb(247, 67, 46);
+.info__icon a:hover {
+  color:rgb(9, 165, 137);
 }
 .nav__overlay {
   position: fixed;

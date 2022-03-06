@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import { userSelector, getHistoryUser } from '../../../store/storeAction';
 import {useDispatch, useSelector} from 'react-redux'
 import {useEffect} from 'react';
-import './History.scss'
+import './User.scss'
 
 export default function History() {
   const dispatch = useDispatch()

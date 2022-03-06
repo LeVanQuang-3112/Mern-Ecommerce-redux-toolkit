@@ -1,0 +1,45 @@
+
+//History
+  .history__item {
+    font-size: 1.4rem!important;
+  }
+  .text__transform {
+    text-transform: capitalize;
+  }
+
+//Infor
+
+.info__container {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+}
+.info__container__item {
+  min-width: 35%;
+}
+.info__image--container {
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 200px;
+}
+.info__image {
+  width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.info__content--container {
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 990px) {
+  .info__container__item {
+    margin: auto;
+  }
+  .info__content--container {
+    margin-top: 2rem;
+  }
+}

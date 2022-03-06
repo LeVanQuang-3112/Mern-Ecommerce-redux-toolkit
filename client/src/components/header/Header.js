@@ -17,6 +17,7 @@ export default function Header() {
     const login = JSON.parse(localStorage.getItem('login'))
     const userAction = useSelector(userSelector)
     const {userInfo, cartItems} = userAction
+    console.log(userInfo)
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -107,8 +108,8 @@ export default function Header() {
           <div className="logo__bottom">
           <Link to="/" onClick={() => setCategory("")}><img src={Logo} alt="" className="logo__image"/></Link>
           </div>
-          <div className="heart__icon">
-            <Link to="/products"><i className="fas fa-heart header__icon"></i></Link>
+          <div className="info__icon">
+            <Link to="/info"><i className="fas fa-heart header__icon"></i></Link>
           </div>
           <div className="search__header--container">
               <form onSubmit={handleSearchSubmit} className="search__form">
@@ -121,11 +122,20 @@ export default function Header() {
               </form>
           </div>
           {
+            isLogged
+            ? (
+              <>
+              {
             isAdmin 
             ? (
               <Link to="/admin">
           <div className="flexrow infor__icon">
-          <i className="far fa-user header__icon"></i>
+            {
+              userInfo.avatar !== ""
+              ?
+              (<img src={userInfo.avatar} alt="avatar" className="avatar__header"/>)
+             : (<i className="far fa-user header__icon"></i>)
+            }
           <p>{userInfo.name}</p>
           </div>
 
@@ -133,12 +143,21 @@ export default function Header() {
             ) : (
               <Link to="/history">
           <div className="flexrow infor__icon">
-          <i className="far fa-user header__icon"></i>
+          {
+              userInfo.avatar !== ""
+              ?
+              (<img src={userInfo.avatar} alt="avatar" className="avatar__header"/>)
+             : (<i className="far fa-user header__icon"></i>)
+            }
           <p>{userInfo.name}</p>
           </div>
 
               </Link>
             )
+          }
+          </>
+            )
+            : (<i className="far fa-user header__icon"></i>)
           }
           <div className="flexrow cart" style={{marginRight: "8px"}}>
             <Link to="/cart">

@@ -13,6 +13,7 @@ import ScrollTop  from './components/mainpage/support/ScrollTop';
 import NotFound  from './components/mainpage/support/NotFound';
 import ScrollToTop  from './components/mainpage/support/ScrollTopPage';
 import Footer from './components/footer/Footer';
+import { Info } from './components/mainpage/user/Info';
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false)
@@ -40,6 +41,7 @@ function App() {
          <Route path="/cart" element={<Cart />} />
          <Route path="/admin" element={<Admin/>} />
          <Route path="/history" element={ <History/> } />
+         <Route path="/info" element={<Info/>} />
          <Route path="/admin/:id" element={<Admin/>} />
 
          <Route path="#" index element={<NotFound />} />

@@ -28,7 +28,7 @@
 
 ### Home interface
 
-![alt](https://res.cloudinary.com/levanquang/image/upload/v1646502324/redux-tutorial/screencapture-localhost-3000-2022-03-06-00_36_40_gbtbij.png)
+![alt](https://res.cloudinary.com/levanquang/image/upload/v1646546478/redux-tutorial/screencapture-localhost-3000-2022-03-06-13_00_22_s1h2wu.png)
 
 ### Admin page interface
 
@@ -45,3 +45,7 @@
 ### Product detail page interface
 
 ![alt](https://res.cloudinary.com/levanquang/image/upload/v1646502855/redux-tutorial/screencapture-localhost-3000-products-61ec104c3d4aa9384cf7f783-2022-03-06-00_53_43_pjqivx.png)
+
+### Information user page interface
+
+![alt](https://res.cloudinary.com/levanquang/image/upload/v1646546343/redux-tutorial/screencapture-localhost-3000-info-2022-03-06-12_50_17_hl5vzj.png)
