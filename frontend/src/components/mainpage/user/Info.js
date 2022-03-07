@@ -13,12 +13,12 @@ export const Info = () => {
     const login = JSON.parse(localStorage.getItem('login'))
     const userAction = useSelector(userSelector)
     const {userInfo} = userAction
-    console.log(userInfo)
+    // console.log(userInfo)
     useEffect(() => {
         if(login) {
           dispatch(getInfoUser(login.accesstoken))
         }
-        }, [dispatch])
+        }, [dispatch, login.accesstoken])
   return (
     <div className="main">
     <div className="container">

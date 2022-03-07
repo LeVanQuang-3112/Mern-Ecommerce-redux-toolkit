@@ -10,13 +10,13 @@
 
 ## Install dependencies for client
 
-### cd client ---> `npm install`
+### cd frontend ---> `npm install`
 
 ## Run project
 
 ### `npm run dev`
 
-### cd client `npm start`
+### cd frontend `npm start`
 
 ### Server runs on http://localhost:5000 and client on http://localhost:3000
 

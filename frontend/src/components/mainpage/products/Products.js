@@ -6,7 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { ProductItem } from '../products/ProductItem'
+import { ProductItem } from './ProductItem'
 import './Products.scss'
 import Loading from '../support/Loading';
 
