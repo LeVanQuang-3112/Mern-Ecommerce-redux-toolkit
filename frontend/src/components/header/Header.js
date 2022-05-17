@@ -13,11 +13,12 @@ export default function Header() {
     const [search, setSearch] = useState("")
     const [sort] = useState("")
     const [page] =useState(1)
+    const [cart, setCart] = useState([])
     const [handleSearch, setHandleSearch] = useState("")
     const login = JSON.parse(localStorage.getItem('login'))
     const userAction = useSelector(userSelector)
     const {userInfo, cartItems} = userAction
-    console.log(userInfo)
+    // console.log(userInfo)
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -40,6 +41,12 @@ export default function Header() {
     useEffect(() => {
       setSearch(handleSearch)
     }, [handleSearch])
+
+    useEffect(() => {
+       if(login) {
+         setCart(cartItems)
+       }
+    },[cartItems, setCart])
 
     const handleSearchSubmit = async(e) => {
           e.preventDefault()
@@ -163,7 +170,7 @@ export default function Header() {
             <Link to="/cart">
               <i className="fas fa-shopping-cart header__icon"></i>
             </Link>
-          <p>{login ? cartItems.length : '0'}</p>
+          <p>{login ? cart.length : '0'}</p>
           </div>
         </div>
       </div>

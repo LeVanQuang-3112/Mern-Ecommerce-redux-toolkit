@@ -66,7 +66,7 @@ export const Cart = () => {
         }
     }
 
-console.log(cart)
+// console.log(cart)
     useEffect(() => {
         setCart(cartItems)
     }, [cart, cartItems])

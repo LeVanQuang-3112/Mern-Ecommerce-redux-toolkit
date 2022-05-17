@@ -37,14 +37,10 @@ export const userLogout = createAsyncThunk('user/userLogout', async () => {
 })
 
 export const getInfoUser = createAsyncThunk('user/getInfoUser', async (token) => {
-    // try {
         const {data} = await axios.get(`http://localhost:5000/user/infor`, {
             headers: {Authorization: token}
         })
         return data;
-    // } catch(error) {
-    //     Swal.fire("error", error.response.data.msg, "error")
-    // }
 })
 
 export const getHistoryUser = createAsyncThunk('user/getHistoryUser', async (token) => {
@@ -53,7 +49,6 @@ export const getHistoryUser = createAsyncThunk('user/getHistoryUser', async (tok
         })
         return response.data;
 })
-
 
 
 // admin
@@ -112,6 +107,7 @@ export const decrement = createAsyncThunk('cart/decrement', async (id) => {
 })
 
 
+//user slice 
 
 const userSlice = createSlice({
     name: 'user',
@@ -173,6 +169,8 @@ const userSlice = createSlice({
     }
 })
 
+//products slice
+
 export const productSlice = createSlice({
     name: 'products',
     initialState: {
@@ -201,6 +199,8 @@ export const productSlice = createSlice({
         },
     }
 })
+
+//admin slice
 
 export const adminSlice = createSlice({
     name: 'admin',
